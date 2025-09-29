@@ -15,9 +15,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3 
-      with:
-       repository: CamilaAM/HealthCheck
-       token: ${{ secrets.PAT }} 
     
     - name: Set up Go
       uses: actions/setup-go@v4
