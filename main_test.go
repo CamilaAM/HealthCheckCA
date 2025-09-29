@@ -7,7 +7,7 @@ import (
 )
 
 func TestPingHandler(t *testing.T) {
-	req := httptest.NewRequest(http.MethodGet, "/ping", nil)
+	req := httptest.NewRequest(http.MethodGet, "/pong", nil)
 	w := httptest.NewRecorder()
 
 	ping(w, req)
@@ -20,7 +20,7 @@ func TestPingHandler(t *testing.T) {
 	}
 
 	body := w.Body.String()
-	expected := "ping"
+	expected := "pong"
 
 	if body != expected {
 		t.Errorf("expected body %q; got %q", expected, body)
