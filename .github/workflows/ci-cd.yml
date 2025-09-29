@@ -26,7 +26,6 @@ jobs:
         
     - name: Run tests
       run:  |
-        cd healthcheck
         go test
         
   build:
