@@ -7,7 +7,7 @@ import (
 )
 
 func TestPingHandler(t *testing.T) {
-	req := httptest.NewRequest(http.MethodGet, "/pong", nil)
+	req := httptest.NewRequest(http.MethodGet, "/ping", nil)
 	w := httptest.NewRecorder()
 
 	ping(w, req)
